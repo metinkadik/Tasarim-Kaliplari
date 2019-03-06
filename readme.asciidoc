@@ -1,0 +1,120 @@
+= Linux Nedir ?
+
+Linux, serbestçe dağıtılabilen,  çok kullanıcılı UNIX işletim sistemi türevidir. Linux, İnternet üzerinde ilgili ve meraklı birçok kişi tarafından ortak olarak geliştirilmekte olan ve  birçok platformda çalışabilen ve herhangi bir maliyeti olmayan bir işletim sistemidir.
+
+===  Neden Linux ?
+
+. Özgürdür
+
+* Lisansı sizi kısıtlamaz, üreticiyi sizden korumak için değil sizin haklarınızı korumak için tasarlanmıştır.
+
+. Şeffaftır
+
+* Kaynak kodlarını kendi ihtiyaçlarınıza göre değiştirebilir, kendi dağıtımınızı üretebilirsiniz. Ne yaptığını ve ne yapmadığını kaynak koduna bakarak bilirsiniz.
+
+. Özelleştirilebilir
+
+* Sistemi, kendi beğeninize göre özgürce değiştirebilirsiniz. Hem görünüş, hem de davranış açısından.
+
+[WARNING]
+====
+Linux kullanmak Windows kullanmaktan daha zordur.
+====
+
+[IMPORTANT]
+====
+Linuxa girdiğinizde hayatınızda yeni bir pencere aralanıcaktır.
+====
+
+[NOTE]
+====
+Linuxun masaüstü pazar payı Windowsa göre çok düşüktür.
+====
+
+https://linux.org.tr
+https://linux.org.tr/indir/[Linux indir]
+
+image::https://i0.wp.com/sezerbozkir.com/wp-content/uploads/2016/07/linux-logo-600x300.png?fit=505%2C250[Linux]
+
+image::linux.jpg[Sunset]
+
+video::_Kc9ImFpqro[youtube]
+
+[source,c]
+----
+#include <pthread.h>
+#include <stdio.h>
+
+int sum; /* this data is shared by the thread(s) */
+
+void *runner(void *param); /* the thread */
+
+int main(int argc, char *argv[])
+{
+pthread_t tid; /* the thread identifier */
+pthread_attr_t attr; /* set of attributes for the thread */
+
+if (argc != 2) {
+	fprintf(stderr,"usage: a.out <integer value>\n");
+	/*exit(1);*/
+	return -1;
+}
+
+if (atoi(argv[1]) < 0) {
+	fprintf(stderr,"Argument %d must be non-negative\n",atoi(argv[1]));
+	/*exit(1);*/
+	return -1;
+}
+
+/* get the default attributes */
+pthread_attr_init(&attr);
+
+/* create the thread */
+pthread_create(&tid,&attr,runner,argv[1]);
+
+/* now wait for the thread to exit */
+pthread_join(tid,NULL);
+
+printf("sum = %d\n",sum);
+}
+
+/**
+ * The thread will begin control in this function
+ */
+void *runner(void *param) 
+{
+int i, upper = atoi(param);
+sum = 0;
+
+	if (upper > 0) {
+		for (i = 1; i <= upper; i++)
+			sum += i;
+	}
+
+	pthread_exit(0);
+}
+
+----
+
+[source,bash]
+----
+#!/bin/bash 
+number=0 
+echo -n "Bir sayi girini > " 
+read number
+echo "Girdiginiz Sayi $number"
+if [ $((number % 2)) -eq 0 ]; then
+    echo "Girdiginiz sayi cifttir"
+else
+    echo "Girdiginiz sayi tektir."
+fi 
+----
+.Popüler Linux Dağıtımları
+|===
+|Dağıtım | Amaç
+
+|Ubuntu | Ev ve iş kullanıcıları için
+|Debian | Linux uzmanları ve ticari amaçlı uygulamalar için
+|Kali   | Güvenlik ve sızma testleri için
+
+|===
