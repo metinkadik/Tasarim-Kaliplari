@@ -1,0 +1,14 @@
+= Emlak Sitesi 
+
+.Ziyaretçi Aktörü :
+
+İl , ilçe , mahalle vb. kriterlere göre arama gerçekleştirebilir ve ilanları görünlüyebilir.İlanların altına yorum yapabilir.
+
+.Üye Aktörü:
+
+Ziyaretçiye ek olarak üye arama özelliği vardır. Bu özellik arama modülünün genişletilmiş (extend) halidir.
+Ayrıca üye girişi yaparak ilan verebilir veya özel mesaj atabilir.
+
+.Yönetici Aktörü
+
+Yöneticiler için ilan silme özellliği getirilmiştir. Ayrıca tüm ilanları sil özelliği ilan silme özelliğini include eder.
