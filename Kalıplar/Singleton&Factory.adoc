@@ -1,0 +1,17 @@
+= Singleton
+
+Singleton pattern bir sınıftan yalnızca bir nesne      oluşmasını sağlamak için geliştirilmiş bir kalıptır.
+Bu sayede nesneden yeni bir tane oluşturmasını engeller ve nesneye ihtiyaç duyulduğunda o nesnenin daha önceden oluşturulan örneği çağırır.
+
+Ben projemde, her üyenin ilan verme işini tek bir nesne üzerinden yapması için singleton'a başvurdum.
+
+Her client için nesne oluşturmaktansa tek bir nesne ile daha az maliyetli bir iş yapmış oldum.
+
+
+= Factory
+
+Yazdığımız program da birbirine benzeyen birden fazla sınıf olabilir.Bu benzer nesnelerin üretiminden sorumlu olan kalıp factorydir.
+
+Projemde birbirine benzeyen ev sınıflarını bir arayüz altına aldım.
+
+Ev factory classından Ev arayüzündeki classlardan nesneler üretebildim.
