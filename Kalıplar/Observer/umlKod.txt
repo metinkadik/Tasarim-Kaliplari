@@ -1,0 +1,52 @@
+﻿@startuml
+title Classes - Class Diagram
+rectangle ObserverPattern {
+interface Observable <<interface>> {
+
+  + void addObserver(Observer)
+  + void removeObserver(Observer)
+  + void notifyObserver(Observer)
+}
+
+interface Observer <<interface>> {
+
+  + void notify()
+
+}
+
+class Villa {
+  - Observable observable
+  + void notify()
+  + void removeObserver() 
+
+}
+
+class Apartman {
+  - Observable observable
+  + void notify()
+  + void setObservable()
+  + void removeObserver() 
+
+}
+
+class NoticeObservable  {
+  - List<Observer> observerList
+  - String message
+  + void addObserver()
+  + void removeObserver()
+  + void notifyObserver()
+
+} 
+}
+class ObserverPatternDemo {
+
+  + void main()
+
+} 
+ObserverPatternDemo ---> ObserverPattern
+Observer <|.. Villa
+Observer <|.. Apartman
+Observable <|.. NoticeObservable
+Observable o-left- Observer 
+
+@enduml

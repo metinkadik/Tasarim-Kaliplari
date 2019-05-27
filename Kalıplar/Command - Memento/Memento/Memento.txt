@@ -1,0 +1,40 @@
+﻿@startuml
+title Classes - Class Diagram
+
+
+
+
+class Memento {
+  - String durum
+  + Memento()
+  + String getDurum() 
+}
+
+class Ev {
+  - String durum
+  + void setDurum()
+  + Memento MementoDurumunuKaydet()
+  + void getMementoDurumu
+  + String getDurum() 
+}
+
+
+
+class EvHafıza {
+  - List <Memento> mementoListesi
+  + void ekle()
+  + Memento get()
+}
+
+
+class MementoPattern {
+  + void main()
+} 
+
+
+
+Ev -right-> Memento
+EvHafıza --> Memento
+
+
+@enduml

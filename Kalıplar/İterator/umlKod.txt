@@ -1,0 +1,40 @@
+﻿@startuml
+title Classes - Class Diagram
+
+interface Iterator <<interface>> {
+
+  + boolean hasNext()
+  + Object next()
+
+}
+
+interface Container <<interface>> {
+
+  + Iterator getIterator()
+
+}
+
+class HouseRepository {
+    String houses
+  + Iterator getIterator()
+
+}
+
+class HouseIterator {
+  + int index
+  + boolen hasNext()
+  + Object next()
+
+} 
+
+class IteratorPatternDemo {
+   
+  + void main()
+
+} 
+
+Container <|-- HouseRepository
+Iterator <|-- HouseIterator
+IteratorPatternDemo .right.> HouseRepository : use
+HouseRepository o-right- HouseIterator : has
+@enduml

@@ -1,0 +1,48 @@
+﻿@startuml
+title Classes - Class Diagram
+rectangle Command {
+
+
+interface Komut <<interface>> {
+  + void uygula()
+}
+
+class evAl {
+  - Ev ev
+  + void evAl()
+  + void uygula() 
+}
+
+class evSat {
+  - Ev ev
+  + void evSat()
+  + void uygula() 
+}
+
+}
+
+class Ev {
+  - String isim
+  + void Al()
+  + void sat()
+}
+
+class Aracı  {
+  - List<Komut> komutListesi
+  - String message
+  + void Komutçu()
+  + void KomutVer()
+} 
+
+class CommandPattern {
+  + void main()
+} 
+
+
+Komut <|.. evAl
+Komut <|.. evSat
+CommandPattern --> Aracı
+CommandPattern -left-> Ev
+Aracı -right-> Command
+
+@enduml

@@ -1,0 +1,6 @@
+pattern5.IteratorPatternDemo
+pattern5.HouseRepository$HouseIterator
+pattern5.Container
+pattern5.HouseRepository
+pattern5.Pattern5
+pattern5.Iterator
