@@ -1,0 +1,31 @@
+﻿@startuml
+title Class Diagram
+
+
+rectangle CompositPattern {
+
+
+class Adres {
+ - String adres
+ - String derinlik
+ + List<Adres> liste
+ + void add()
+ + void remove()
+ + List<Adres> getListe()
+ + String toString()
+
+
+} 
+
+class CompositPatternDemo {
+    + void main()
+    
+
+}
+
+}
+
+CompositPatternDemo "1" --> "0..*" Adres
+
+
+@enduml

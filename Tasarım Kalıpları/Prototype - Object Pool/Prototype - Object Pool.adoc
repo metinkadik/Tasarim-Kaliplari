@@ -1,0 +1,8 @@
+= Prototype
+
+Var olan bir nesneden, kopyalama yöntemi ile yeni nesne yaratmak için bu tasarım deseni kullanılır. Projemde kopyalamak ve değiştirmek istediğim evleri deep copy ile kopyalama işlemi gerçekleştirdim.
+
+
+= Object Pool
+
+Projelerimizde sınıfların oluşturulması bazen masraflı olabiliyor. Bellekten gereksiz yer ayırma durumunda performans sorunları ortaya çıkabiliyor. Bu tür performans sorunlarını çözmek için sınıfların yeniden oluşturulmasını engellemek bir çözüm olabilir. Bunun için Object Pool Design Pattern bulunmakta. Projemde ev nesneleri üretip pool listesine ekliyorum. Daha sonra kullanmak için listeden nesne çağırıyorum. Eğer o nesneden yoksa yeniden nesne oluşturmasını engelliyor.

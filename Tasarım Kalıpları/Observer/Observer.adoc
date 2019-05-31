@@ -1,0 +1,3 @@
+= Observer
+
+Bir nesnenin durumlarında değişiklik olduğunda, bu değişikliklerden haberdar olmak isteyen diğer nesnelere haber verilmesi gerektiği durumlarda bu tasarım deseni kullanılır. Projemde ev listesine yeni bir satılık ev gelmesi halinde kullanıcılara bildirim gelmesi gerekmektedir. Bu probleme uygun olarak Observer pattern kullandım.

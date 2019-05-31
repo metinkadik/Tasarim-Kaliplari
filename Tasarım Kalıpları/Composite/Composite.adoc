@@ -1,0 +1,3 @@
+= Composite
+
+Bu tasarım deseninin amacı, nesneleri ağaç yapısına göre düzenleyerek, ağaç yapısındaki alt üst ilişkisini kurmaktır. Projemde bu yapıyı evlerin adreslerine uyarladım. En üst katmanda İl altında ilçe onun altında mahalle,cadde ve sokak var. Bu hiyerarşi ile birbirine bağımlı bir adres yapısı oluşturdum.

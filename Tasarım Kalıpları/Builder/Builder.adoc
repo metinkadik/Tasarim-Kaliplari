@@ -1,0 +1,4 @@
+= Builder
+
+Bu tasarım deseni ile bir nesneyi, bir sınıfı, aşama aşama farklı özellikleri ile oluşturabiliriz. Nesneyi farklı özellikler ile oluşturmaya yarayan bu sınıfa Kurucu nesne ismi verilir. Kurucu nesneden farklı özelliklerde alt sınıflar da türeyebilir. 
+Projemde İlan verilmiş tüm evlerin özellik sayısı aynı değildi. Bazı evlerin adresi bazı ilanların telefon numarası eksikti. Hepsi için bir metot yazmaktansa builder tasarım deseni ile bu sorunu hallettim. 

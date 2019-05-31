@@ -1,0 +1,4 @@
+= Memento
+
+Bir nesnenin durumunu saklayıp, daha sonra bu duruma tekrar geri dönebilmesini sağlayan tasarım desenidir.
+Projemde Evlerin satılma, kiralanma durumları iptal olabilir veya gayrimenkul el değiştirebilir. Eski duruma geri dönmek amacıyla memento tasarım desenini kullandım.

@@ -1,0 +1,4 @@
+= iterator
+
+Nesne tabanlı dillerde uygulama geliştirilirken en sık kullanılan yapılardan biri de koleksiyonlardır.  Iterator tasarım deseni ile koleksiyon yapısı bilinmesine ihtiyaç olmadan koleksiyon elemanları üzerinde işlem yapılabilmesini sağlar. Yani iterator tasarım deseni kullanılarak koleksiyonun array, queue, list olması önemli olmadan, aynı şekilde elemanlarının elde edilmesi sağlanır.
+Projemde evlerin listesini tuttuğum koleksiyonlar üzerinde veri yapısı farketmeden gezebilmek için iterator paterni kullandım.

@@ -1,0 +1,33 @@
+@startuml
+title Class Diagram
+
+class Ev {
+    - String name
+    - String address
+    - int price
+    - String phone
+    + Ev()
+    + String getName()
+    + int getPrice()
+    + String getPhone()
+    + String getAddress()
+    + String toString()
+}
+class EvBuilder <<static>> {
+        - String name
+        - int price
+        - String phone
+        - String address
+        + EvBuilder()
+        + EvBuilder price()
+        + EvBuilder phone()
+        + EvBuilder address()
+        + Ev build()
+        + void main()
+
+}
+
+EvBuilder .right.> Ev:uses
+
+
+@enduml

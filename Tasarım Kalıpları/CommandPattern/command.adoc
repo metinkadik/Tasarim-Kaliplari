@@ -1,0 +1,4 @@
+= Command
+
+Bu tasarım deseninde, nesneler bir işlevi ve bu işlev için gerekli değişgenleri içerirler. Dışarıdan bu nesneler tetiklenerek bazı işlemler gerçekleştirilir. Bu tasarım deseniyle, işlemi tetikleyecek nesneler ile işlemi yapan nesneler birbirlerinden ayrılmış olur.
+Projemde ev alma ve satma komutlarını command pattern ile gerçekledim. Komutlar bir aracı sınıf üzerinden gerçekleştirildi.

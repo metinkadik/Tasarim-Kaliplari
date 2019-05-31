@@ -1,0 +1,68 @@
+@startuml
+title Class Diagram
+
+enum EvType {
+  YALI
+  APARTMAN
+  PREFABRÝK 
+}
+
+enum Location {
+  DEFAULT
+  ÝSTANBUL
+  ÝZMÝT 
+}
+
+abstract Ev <<abstract>> {
+  + {abstract} void construct()
+  +  EvType getModel() 
+  +  void setModel()
+  + Location getLocation() 
+  + void setLocation()
+  +String toString()
+ 
+}
+
+class PrefabrikEv{
+  + PrefabrikEv()
+  # void construct()
+}
+
+class ApartmanEv{
+    + ApartmanEv()
+  # void construct()
+}
+
+class YalýEv{
+    + YalýEv()
+  # void construct()
+}
+rectangle factory{
+class ÝzmitEvFactory 
+{ 
++ {static} Ev buildEv()
+
+}
+class ÝstanbulEvFactory 
+{ 
++ {static} Ev buildEv()
+}
+class DefaultEvFactory 
+{ 
++ {static} Ev buildEv()
+}
+}
+class AbstractDesign{
++ void main()
+}
+
+
+Ev <|.. PrefabrikEv
+Ev <|.. ApartmanEv
+Ev <|.. YalýEv
+factory --> Ev : creates
+AbstractDesign --> factory : uses
+
+
+
+@enduml

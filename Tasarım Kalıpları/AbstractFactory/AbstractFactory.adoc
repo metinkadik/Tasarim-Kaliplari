@@ -1,0 +1,4 @@
+= AbstractFactory
+
+Yaratılma sorumluluklarının çeşitli sınıf hiyerarşileri ile sağlandığı bir tasarım desenidir. İstemci sınıf, çeşitli kategorideki sınıflara ihtiyaç duyar. Bu sınıflar, sistemde alt/üst sınıf hiyerarşileri şeklinde bulunurlar.
+Projemde Ev adında abstract classım var. Bu classdan türeyen Yalı, Apartman ve prefabrik olmak üzere 3 adet class var.Ev  üretmek için 3 adet fabrika classım var. Bunlar izmit istanbul ve default fabrika classları. EvFactory classı üzerinden switch-case operasyonu ile istenilen ev nesnesi üretilebiliyor.
